@@ -8,6 +8,17 @@
 #include "fce.h"
 #include "memory.h"
 
+byte PPU_SPRRAM[0x100];
+byte PPU_RAM[0x4000];
+
+ALLEGRO_VERTEX ppu_background_pixels[65536];
+ALLEGRO_VERTEX ppu_sprite_pixels[65536];
+ALLEGRO_VERTEX ppu_behind_background_sprite_pixels[65536];
+
+int ppu_background_pixels_number;
+int ppu_behind_background_sprite_pixels_number;
+int ppu_sprite_pixels_number;
+
 byte ppu_sprite_palette[4][4];
 bool ppu_2007_first_read;
 byte ppu_addr_latch;
